@@ -1,3 +1,9 @@
+# React (Eth) Cryptocurrency / Block-chain Wallet using solidity, mocha, ES-6/7
+
+The purpose for this repo is to provide a lite-weight client that would connect to local node, test-net-nodes, Meta-mask etc..
+
+Work in Progress.........
+
 
 
 
