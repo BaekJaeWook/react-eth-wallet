@@ -1,19 +1,20 @@
-import React from 'react';
-import withWeb3 from './../../hoc/web3/Web3';
+import React, { Fragment } from 'react';
+
+import withWeb3 from './../../hoc/web3/withWeb3'
 
 
-const wallet = (props, { web3 }) => {
 
+const wallet = (props) => {
 
-    return(
-
-        <div>
-                <h1>My Dapp</h1>
-                <pre>{JSON.stringify(web3, null, 4)}</pre>
-        </div>
-            
-    );
+    const str = "Web3 Loaded Succesfully, Version: " + props.web3.version;
+    return (
+        <Fragment>
+        <h1>My Dapp</h1>
+        <h5>{str}</h5>
+        <p>Get Creative with your own imagination !!</p>
+        </Fragment>
+    )
     
-}
+};
 
 export default withWeb3(wallet);

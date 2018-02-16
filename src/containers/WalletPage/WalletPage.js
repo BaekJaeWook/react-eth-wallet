@@ -2,11 +2,12 @@ import React, { Fragment, Component } from 'react';
 
 import WalletInfo from '../../components/Wallets/Wallet';
 import AuthWindow from './../../components/AuthWindow/AuthWindow';
+//import ErrorBoundary from './../../hoc/withErrorHandler/errorBoundary'
 
 class WalletPage extends Component {
 
   state={
-    showAuthWindow : true
+    showAuthWindow : false
   }
 
   showAuthWindow = (modalCurrState) => {
@@ -17,9 +18,8 @@ class WalletPage extends Component {
 
     return (
       <Fragment>
-          <WalletInfo />
-          {/*{this.state.showAuthWindow?<AuthWindow showAuthWindowCb={this.showAuthWindow}/>:null} */}
-          <AuthWindow showAuthWindow={this.state.showAuthWindow} closeCb={this.showAuthWindow}/>
+        <WalletInfo />
+        {this.state.showAuthWindow?<AuthWindow showAuthWindow={this.state.showAuthWindow} closeCb={this.showAuthWindow}/>:null}
       </Fragment>
     );
   }

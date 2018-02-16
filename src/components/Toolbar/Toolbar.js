@@ -1,15 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import classes from './Toolbar.css';
 import SideNavBtn from './../SideNav/Toggler/Toggler'
+import NavItems from './../NavLinks/NavItems';
 
 const toolbar = (props) => (
     <header className = {classes.Toolbar}>
         <div className = {classes.AccNav}>
             <SideNavBtn backDropClicked={props.sideNavToggler}/>
-            <NavLink to="/" exact activeClassName={classes.active}><i className="fa fa-envelope-open"></i><span className={classes.HiddenSmall}>Wallet</span></NavLink>
-            <NavLink activeClassName={classes.active} to="/contracts"><i className="fa fa-file-text-o"></i><span className={classes.HiddenSmall}>Contracts</span></NavLink>
+            <NavItems />
+            
         </div>
         <ul style = {{"flexGrow": 0.8}} className = {classes.VerySmall}>
             <li>
